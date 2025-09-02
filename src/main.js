@@ -225,3 +225,46 @@ const swiper = new Swiper(".produtCarouselSlider", {
     },
   },
 });
+
+
+const swiperHeroSlider = new Swiper('.heroSliderSwiper', {
+  loop: true,
+  autoplay: {
+    delay: 5000, 
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-prev-custom",
+    prevEl: ".swiper-button-next-custom",
+  },
+  on: {
+    slideChange: function () {
+      const activeSlide = this.slides[this.activeIndex];
+      const videoElement = activeSlide.querySelector('.swiper-video');
+      const slideType = activeSlide.getAttribute('data-slide-type');
+
+      // Önceki slayttaki videoyu durdur
+      const prevVideo = this.slides[this.previousIndex].querySelector('.swiper-video');
+      if (prevVideo) {
+        prevVideo.pause();
+        prevVideo.currentTime = 0; // Videoyu başa sar
+      }
+
+      if (slideType === 'video' && videoElement) {
+        // Video slaytı ise
+        videoElement.play().catch(e => console.error("Video otomatik oynatılamadı:", e));
+        this.autoplay.stop(); // Swiper'ın otomatik geçişini durdur
+
+        videoElement.onended = () => {
+          this.slideNext(); // Video bitince bir sonraki slayta geç
+          this.autoplay.start(); // Swiper'ın otomatik geçişini tekrar başlat
+        };
+      } else {
+        // Görsel slaytı ise
+        // Otomatik oynatmayı 5 saniye olarak ayarla
+        this.autoplay.start();
+        this.autoplay.delay = 5000;
+      }
+    }
+  }
+});
