@@ -30,7 +30,7 @@ $container-max-widths: (
   lg: 60rem,
   xl: 71.25rem,
   xxl: 82.5rem,
-  xxxl: 106.6875rem
+  xxxl: 100rem
 );
 
 @use "../node_modules/bootstrap/scss/bootstrap" with (
@@ -44,6 +44,11 @@ $container-max-widths: (
   $grid-breakpoints: $grid-breakpoints,
   $container-max-widths: $container-max-widths
 );
+
+.container-header {
+  max-width: 106.25rem;
+  margin: 0 auto;
+}
 
 .col-lg-2-5 {
   @media (min-width: 60rem) {
@@ -439,6 +444,124 @@ header {
   }
 }
 
+.homepage-two-section {
+  position: relative;
+  height: 36rem;
+
+  background-image: url("../images/ilk-tir-yol.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to left, rgb(249 206 8), rgb(249 206 8 / 0%));
+    content: " ";
+  }
+
+  .white-area {
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+    border-radius: 25px;
+    h2 {
+      font-size: 1.875rem;
+      font-weight: 900;
+      color: $primary;
+      margin-bottom: 1.5rem;
+    }
+    .content p {
+      color: #2d2d2d;
+      font-size: 1.125rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+    a {
+      display: inline-block;
+      background-color: rgb(249 206 8);
+      border-radius: 25px;
+      color: #2d2d2d;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      width: 9.5rem;
+      height: 2.625rem;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: rgb(236, 195, 8);
+        transform: scale(0.98);
+      }
+    }
+  }
+}
+
+.shell-section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  .first-shell-area {
+    max-height: 450px;
+  }
+
+  img.img-full {
+    width: 100%;
+    max-height: 450px;
+    min-height: 450px;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+  }
+  .left-image-area {
+    padding: 0;
+  }
+  .right-red-area {
+    background-color: #e1251b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .btn-red {
+      background-color: #bb0000;
+      color: #fff;
+      border-radius: 30px;
+      width: 9.375rem;
+      height: 2.75rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .first-shell-area {
+    .heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .right-red-area {
+      h2 {
+        font-size: 1.875rem;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 0;
+      }
+      .content {
+        p {
+          color: #fff;
+          font-size: 1.125rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
 .footer {
   position: relative;
   color: #333;
@@ -557,7 +680,7 @@ header {
     a {
       color: #545454;
       text-decoration: none;
-      font-size: .875rem;
+      font-size: 0.875rem;
       font-weight: 400;
     }
     a:hover {
