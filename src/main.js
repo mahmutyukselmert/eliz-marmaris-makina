@@ -230,7 +230,7 @@ const swiper = new Swiper(".produtCarouselSlider", {
 const swiperHeroSlider = new Swiper('.heroSliderSwiper', {
   loop: true,
   autoplay: {
-    delay: 5000, 
+    delay: 5000,
     disableOnInteraction: false,
   },
   navigation: {
@@ -267,4 +267,37 @@ const swiperHeroSlider = new Swiper('.heroSliderSwiper', {
       }
     }
   }
+});
+
+// Sayfa yüklendiğinde çalışacak kod
+document.addEventListener('DOMContentLoaded', function () {
+  new Swiper('.product-slider-container', {
+    slidesPerView: 4, // Görünürdeki slayt sayısı
+    spaceBetween: 20, // Slaytlar arası boşluk (piksel cinsinden)
+    loop: true, // Sonsuz döngü
+    navigation: {
+      nextEl: '.next-btn',
+      prevEl: '.prev-btn',
+    },
+    breakpoints: {
+      275: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      // Ekran genişliği 992px'den küçükse 3 slayt göster
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 25,
+      },
+      // Ekran genişliği 1200px'den küçükse 4 slayt göster
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    },
+  });
 });

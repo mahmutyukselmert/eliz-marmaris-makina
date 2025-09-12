@@ -12857,6 +12857,61 @@ textarea.form-control-lg {
   width: max-content;
 }
 
+.news-card {
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0.9375rem;
+  margin-bottom: 2rem;
+}
+.news-card .card-header {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  max-height: 350px;
+  min-height: 350px;
+  border: 0;
+}
+.news-card img {
+  max-height: 350px;
+  min-height: 350px;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+.news-card:hover img {
+  transform: scale(1.05) rotate(1deg);
+}
+.news-card h3.card-title {
+  font-size: 1.3125rem !important;
+  font-weight: 900;
+  color: #292929;
+  font-size: 1.8125rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0 20px;
+}
+.news-card a {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: #292929;
+}
+.news-card .news-content {
+  padding: 0 20px;
+}
+.news-card .news-content p {
+  font-size: 1rem;
+  color: #292929;
+  font-weight: 400;
+}
+@media (max-width: 992px) {
+  .news-card {
+    margin-bottom: 2rem;
+  }
+}
+
 html,
 body {
   font-family: "Red Hat Display";
@@ -14186,6 +14241,35 @@ button.swiper-pagination-bullet {
   fill: #fff;
 }
 
+.page-banner {
+  position: relative;
+  background-color: #e1251b;
+  z-index: 2;
+}
+.page-banner .banner-content {
+  position: relative;
+  background-color: #e1251b;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  height: 80%;
+}
+.page-banner .banner-content .banner-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+.page-banner .banner-content p {
+  font-size: 1.3125rem;
+  color: #ffffff;
+}
+.page-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .last-news-section {
   background-color: #f8f8f8;
   z-index: 1;
@@ -14305,8 +14389,14 @@ button.swiper-pagination-bullet {
 .shell-section {
   margin-top: 3rem;
   margin-bottom: 3rem;
+  /* Ortak stiller */
+  /* Kırmızı Alanın (right-red-area) spesifik renkleri ve arka planı */
+  /* Gri Alanın (right-gray-area) spesifik renkleri ve arka planı */
 }
 .shell-section .first-shell-area {
+  max-height: 450px;
+}
+.shell-section .two-shell-recharge {
   max-height: 450px;
 }
 .shell-section img.img-full {
@@ -14319,15 +14409,12 @@ button.swiper-pagination-bullet {
 .shell-section .left-image-area {
   padding: 0;
 }
-.shell-section .right-red-area {
-  background-color: #e1251b;
+.shell-section .right-shell-area {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.shell-section .right-red-area .btn-red {
-  background-color: #bb0000;
-  color: #fff;
+.shell-section .shell-button {
   border-radius: 30px;
   width: 9.375rem;
   height: 2.75rem;
@@ -14335,22 +14422,403 @@ button.swiper-pagination-bullet {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  text-decoration: none;
 }
-.shell-section .first-shell-area .heading {
+.shell-section .shell-button:hover {
+  transform: scale(1.05);
+}
+.shell-section .heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 1.5rem;
 }
-.shell-section .first-shell-area .right-red-area h2 {
+.shell-section .heading img {
+  max-width: 300px;
+  max-height: 105px;
+  object-fit: cover;
+}
+.shell-section .right-red-area,
+.shell-section .right-gray-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.shell-section .shell-button {
+  border-radius: 30px;
+  width: 9.375rem;
+  height: 2.75rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+}
+.shell-section .right-red-area {
+  background-color: #e1251b;
+}
+.shell-section .right-red-area h2 {
   font-size: 1.875rem;
   font-weight: 800;
   color: #fff;
   margin-bottom: 0;
 }
-.shell-section .first-shell-area .right-red-area .content p {
+.shell-section .right-red-area .content p {
   color: #fff;
   font-size: 1.125rem;
   font-weight: 500;
+}
+.shell-section .right-red-area .shell-button {
+  background-color: #bb0000;
+}
+.shell-section .right-red-area .shell-button:hover {
+  transform: scale(1.05);
+  background-color: #a70202;
+}
+.shell-section .right-gray-area {
+  background-color: #f5f5f5;
+}
+.shell-section .right-gray-area h2 {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #0097bb; /* Gri alan için farklı başlık rengi */
+  margin-bottom: 0;
+}
+.shell-section .right-gray-area .content p {
+  color: #000000; /* Gri alan için farklı paragraf rengi */
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.shell-section .right-gray-area .shell-button {
+  background-color: #09bcd4; /* Gri alan için farklı buton rengi */
+}
+.shell-section .right-gray-area .shell-button:hover {
+  transform: scale(1.05);
+  background-color: #07b2c9;
+}
+
+.home-popular-products-section h3 {
+  font-size: 1.3125rem;
+  font-weight: 800;
+  color: #292929;
+  margin-bottom: 0;
+  width: auto;
+}
+
+.home-popular-products-section {
+  position: relative;
+}
+.home-popular-products-section .product-slider-controls {
+  width: 116px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.home-popular-products-section .product-slider-container {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 0;
+  overflow: hidden;
+}
+.home-popular-products-section .product-slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.home-popular-products-section .product-card {
+  position: relative;
+  width: 33%;
+  box-sizing: border-box;
+  border-radius: 15px;
+  overflow: hidden;
+  justify-content: space-between;
+  border: 0;
+  height: auto;
+  display: flex;
+}
+.home-popular-products-section .product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.9375rem;
+  max-height: 210px;
+  min-height: 210px;
+}
+.home-popular-products-section .product-card a {
+  z-index: 11;
+  text-decoration: none;
+  color: #292929;
+  font-size: 0.875rem;
+}
+@media (max-width: 992px) {
+  .home-popular-products-section .product-card {
+    width: 90%;
+    height: 420px;
+  }
+}
+.home-popular-products-section .card-content {
+  position: relative;
+  width: 100%;
+  padding: 1.625rem 1.375rem 0 1.375rem;
+  z-index: 1;
+  border: 0;
+  flex: 1;
+}
+.home-popular-products-section .card-content h4 {
+  margin-bottom: 1rem;
+  font-size: 1.3125rem;
+  font-weight: 900;
+  color: #292929;
+}
+.home-popular-products-section .card-content p {
+  margin: 10px 0 0;
+  font-weight: 400;
+  color: #292929;
+  font-size: 1rem;
+}
+.home-popular-products-section a.detail-link {
+  background: transparent;
+  border: 0;
+  padding: 1.625rem 1.375rem 0 1.375rem;
+  font-size: 0.875rem;
+  color: #292929;
+  margin-bottom: 1rem;
+}
+.home-popular-products-section a.detail-link span {
+  margin-right: 0.5rem;
+  font-size: 0.875rem;
+  color: #292929;
+}
+.home-popular-products-section .prev-btn,
+.home-popular-products-section .next-btn {
+  cursor: pointer;
+  width: 38px;
+  height: 38px;
+  background-color: transparent;
+  border: 1px solid #b4b4b4;
+  border-radius: 0.75rem;
+  transition: 0.6s ease;
+  user-select: none;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-popular-products-section .prev-btn svg,
+.home-popular-products-section .next-btn svg {
+  fill: #b4b4b4;
+}
+.home-popular-products-section .prev-btn:hover,
+.home-popular-products-section .next-btn:hover {
+  background-color: transparent;
+  border: 1px solid #dd1f25;
+}
+.home-popular-products-section .prev-btn:hover svg,
+.home-popular-products-section .next-btn:hover svg {
+  fill: #ce181e;
+  transition: all 0.3s ease-in-out;
+}
+.home-popular-products-section .prev-btn {
+  margin-right: 1rem;
+}
+.home-popular-products-section .prev-btn:hover svg {
+  transform: translateX(-0.15rem);
+}
+.home-popular-products-section .next-btn:hover svg {
+  transform: translateX(0.15rem);
+}
+.home-popular-products-section .home-services-left-box h5 {
+  color: #464646;
+  font-size: 2.25rem;
+}
+.home-popular-products-section .home-services-left-box p {
+  color: #464646;
+  font-size: 1.3125rem;
+}
+.home-popular-products-section .home-services-right-box h6 {
+  font-family: "Red Hat Display";
+  font-size: 2.25rem;
+  color: #e62b27;
+}
+.home-popular-products-section .home-services-right-box h6 span {
+  font-family: "Red Hat Display";
+  font-size: 1.3125rem;
+  color: #e62b27;
+}
+.home-popular-products-section .home-services-right-box p {
+  color: #404040;
+  font-size: 1.125rem;
+}
+@media (max-width: 992px) {
+  .home-popular-products-section .home-services-right-box {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+  .home-popular-products-section .project-slider-controls {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    top: 0;
+  }
+}
+
+.home-news-sections {
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 3rem 0 6rem 0;
+}
+.home-news-sections h2 {
+  font-size: 1.3125rem;
+  color: #292929;
+  font-weight: 800;
+}
+
+.company-info-first-section {
+  background-color: #ffffff;
+}
+
+.company-info-two-section {
+  background-color: #f5f5f5;
+}
+
+.company-info-first-section,
+.company-info-two-section {
+  padding: 3rem 0;
+}
+.company-info-first-section h2,
+.company-info-two-section h2 {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #313131;
+  margin-bottom: 1.5rem;
+}
+.company-info-first-section p,
+.company-info-two-section p {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #313131;
+}
+.company-info-first-section img,
+.company-info-two-section img {
+  max-height: 37.5rem;
+  min-height: 37.5rem;
+  object-fit: cover;
+  border-radius: 0.9375rem;
+}
+
+.company-news-sections {
+  position: relative;
+  background-color: #ffffff;
+  padding: 3rem 0 6rem 0;
+}
+.company-news-sections h2 {
+  font-size: 1.3125rem;
+  color: #292929;
+  font-weight: 800;
+}
+
+.contact-us-section {
+  position: relative;
+  background-color: #f8f8f8;
+  padding: 3rem 0;
+}
+.contact-us-section .contact-info-area {
+  margin-top: 3rem;
+}
+.contact-us-section .contact-info-area h1 {
+  margin-bottom: 1rem;
+  font-size: 1.875rem;
+  color: #2b2b2b;
+  font-weight: 800;
+}
+.contact-us-section .contact-address {
+  list-style-type: none;
+  padding-left: 0;
+}
+.contact-us-section .contact-address li {
+  font-size: 1.125rem;
+  color: #000000;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.contact-us-section .contact-address li a {
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: #000000;
+}
+.contact-us-section iframe {
+  border-radius: 0.9375rem;
+}
+
+.company-ik-section {
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 3rem 0;
+}
+.company-ik-section p {
+  font-size: 1.125rem;
+  color: #000000;
+  font-weight: 300;
+}
+.company-ik-section p i {
+  font-weight: 600;
+}
+
+.form-area {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.9375rem;
+}
+.form-area h2 {
+  color: #bd1b20;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.form-area form .form-floating input {
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #dd1f25;
+  padding: 1rem 0rem;
+}
+.form-area form .form-floating label {
+  padding: 1rem 0;
+}
+.form-area form .btn-outline-dark {
+  margin-top: 1rem;
+  border: 1px solid #373737;
+  border-radius: 15rem;
+  padding: 0.25rem 2rem;
+  font-size: 1rem;
+  color: #373737;
+  transition: all 0.3s ease-in-out;
+}
+.form-area form .btn-outline-dark:hover {
+  background-color: #373737;
+  color: #fff;
+}
+
+.all-news-sections {
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 3rem 0;
+}
+.all-news-sections h2 {
+  font-size: 1.3125rem;
+  color: #292929;
+  font-weight: 800;
+}
+
+.page-detail-content-section {
+  padding: 3rem 0;
+}
+.page-detail-content-section p {
+  font-size: 1.125rem;
 }
 
 .footer {

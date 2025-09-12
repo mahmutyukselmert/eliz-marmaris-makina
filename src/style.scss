@@ -509,6 +509,9 @@ header {
   .first-shell-area {
     max-height: 450px;
   }
+  .two-shell-recharge {
+    max-height: 450px;
+  }
 
   img.img-full {
     width: 100%;
@@ -520,45 +523,462 @@ header {
   .left-image-area {
     padding: 0;
   }
-  .right-red-area {
-    background-color: #e1251b;
+
+  .right-shell-area {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    .btn-red {
-      background-color: #bb0000;
-      color: #fff;
-      border-radius: 30px;
-      width: 9.375rem;
-      height: 2.75rem;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  }
+
+  .shell-button {
+    border-radius: 30px;
+    width: 9.375rem;
+    height: 2.75rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      transform: scale(1.05);
     }
   }
 
-  .first-shell-area {
-    .heading {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    img {
+      max-width: 300px;
+      max-height: 105px;
+      object-fit: cover;
     }
-    .right-red-area {
-      h2 {
-        font-size: 1.875rem;
-        font-weight: 800;
+  }
+
+  /* Ortak stiller */
+  .right-red-area,
+  .right-gray-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .shell-button {
+    border-radius: 30px;
+    width: 9.375rem;
+    height: 2.75rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+  }
+
+  /* Kırmızı Alanın (right-red-area) spesifik renkleri ve arka planı */
+  .right-red-area {
+    background-color: #e1251b;
+  }
+
+  .right-red-area h2 {
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 0;
+  }
+
+  .right-red-area .content p {
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+
+  .right-red-area .shell-button {
+    background-color: #bb0000;
+  }
+
+  .right-red-area .shell-button:hover {
+    transform: scale(1.05);
+    background-color: #a70202;
+  }
+
+  /* Gri Alanın (right-gray-area) spesifik renkleri ve arka planı */
+  .right-gray-area {
+    background-color: #f5f5f5;
+  }
+
+  .right-gray-area h2 {
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: #0097bb; /* Gri alan için farklı başlık rengi */
+    margin-bottom: 0;
+  }
+
+  .right-gray-area .content p {
+    color: #000000; /* Gri alan için farklı paragraf rengi */
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+
+  .right-gray-area .shell-button {
+    background-color: #09bcd4; /* Gri alan için farklı buton rengi */
+  }
+
+  .right-gray-area .shell-button:hover {
+    transform: scale(1.05);
+    background-color: #07b2c9;
+  }
+}
+
+.home-popular-products-section {
+  h3 {
+    font-size: 1.3125rem;
+    font-weight: 800;
+    color: #292929;
+    margin-bottom: 0;
+    width: auto;
+  }
+}
+
+.home-popular-products-section {
+  position: relative;
+
+  .product-slider-controls {
+    width: 116px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .product-slider-container {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: hidden;
+  }
+
+  .product-slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .product-card {
+    position: relative;
+    width: 33%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    overflow: hidden;
+    justify-content: space-between;
+    border: 0;
+    height: auto;
+    display: flex;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      border-radius: 0.9375rem;
+      max-height: 210px;
+      min-height: 210px;
+    }
+
+    a {
+      z-index: 11;
+      text-decoration: none;
+      color: #292929;
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 992px) {
+      width: 90%;
+      height: 420px;
+    }
+  }
+
+  .card-content {
+    position: relative;
+    width: 100%;
+    padding: 1.625rem 1.375rem 0 1.375rem;
+    z-index: 1;
+    border: 0;
+    flex: 1;
+  }
+
+  .card-content h4 {
+    margin-bottom: 1rem;
+    font-size: 1.3125rem;
+    font-weight: 900;
+    color: #292929;
+  }
+
+  .card-content p {
+    margin: 10px 0 0;
+    font-weight: 400;
+    color: #292929;
+    font-size: 1rem;
+  }
+
+  a.detail-link {
+    background: transparent;
+    border: 0;
+    padding: 1.625rem 1.375rem 0 1.375rem;
+    font-size: 0.875rem;
+    color: #292929;
+    margin-bottom: 1rem;
+    span {
+      margin-right: 0.5rem;
+      font-size: 0.875rem;
+      color: #292929;
+    }
+  }
+
+  .prev-btn,
+  .next-btn {
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    background-color: transparent;
+    border: 1px solid #b4b4b4;
+    border-radius: 0.75rem;
+    transition: 0.6s ease;
+    user-select: none;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      fill: #b4b4b4;
+    }
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $primary;
+      svg {
+        fill: $primary-hover;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+
+  .prev-btn {
+    margin-right: 1rem;
+    &:hover {
+      svg {
+        transform: translateX(-0.15rem);
+      }
+    }
+  }
+
+  .next-btn {
+    &:hover {
+      svg {
+        transform: translateX(0.15rem);
+      }
+    }
+  }
+
+  .home-services-left-box {
+    h5 {
+      color: #464646;
+      font-size: 2.25rem;
+    }
+
+    p {
+      color: #464646;
+      font-size: 1.3125rem;
+    }
+  }
+
+  .home-services-right-box {
+    h6 {
+      font-family: $font-primary;
+      font-size: 2.25rem;
+      color: #e62b27;
+
+      span {
+        font-family: $font-primary;
+        font-size: 1.3125rem;
+        color: #e62b27;
+      }
+    }
+
+    p {
+      color: #404040;
+      font-size: 1.125rem;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .home-services-right-box {
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+    .project-slider-controls {
+      position: relative;
+      bottom: 0;
+      right: 0;
+      top: 0;
+    }
+  }
+}
+
+.home-news-sections {
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 3rem 0 6rem 0;
+  h2 {
+    font-size: 1.3125rem;
+    color: #292929;
+    font-weight: 800;
+  }
+}
+
+.company-info-first-section {
+  background-color: #ffffff;
+}
+
+.company-info-two-section {
+  background-color: #f5f5f5;
+}
+
+.company-info-first-section,
+.company-info-two-section {
+  padding: 3rem 0;
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: #313131;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #313131;
+  }
+  img {
+    max-height: 37.5rem;
+    min-height: 37.5rem;
+    object-fit: cover;
+    border-radius: 0.9375rem;
+  }
+}
+
+.company-news-sections {
+  position: relative;
+  background-color: #ffffff;
+  padding: 3rem 0 6rem 0;
+  h2 {
+    font-size: 1.3125rem;
+    color: #292929;
+    font-weight: 800;
+  }
+}
+
+.contact-us-section {
+  position: relative;
+  background-color: #f8f8f8;
+  padding: 3rem 0;
+  .contact-info-area {
+    margin-top: 3rem;
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 1.875rem;
+      color: #2b2b2b;
+      font-weight: 800;
+    }
+  }
+  .contact-address {
+    list-style-type: none;
+    padding-left: 0;
+    li {
+      font-size: 1.125rem;
+      color: #000000;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      a {
+        font-weight: 500;
+        font-size: 1.125rem;
+        color: #000000;
+      }
+    }
+  }
+  iframe {
+    border-radius: .9375rem;
+  }
+}
+
+.company-ik-section {
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 3rem 0;
+  p {
+    font-size: 1.125rem;
+    color: #000000;
+    font-weight: 300;
+    i {
+      font-weight: 600;
+    }
+  }
+}
+
+.form-area {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: .9375rem;
+  h2 {
+    color: #bd1b20;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  form {
+    .form-floating {
+      input {
+        border: 0;
+        border-radius: 0;
+        border-bottom: 1px solid $primary;
+        padding: 1rem 0rem;
+      }
+      label {
+        padding: 1rem 0;
+      }
+    }
+    .btn-outline-dark {
+      margin-top: 1rem;
+      border: 1px solid #373737;
+      border-radius: 15rem;
+      padding: 0.25rem 2rem;
+      font-size: 1rem;
+      color: #373737;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: #373737;
         color: #fff;
-        margin-bottom: 0;
-      }
-      .content {
-        p {
-          color: #fff;
-          font-size: 1.125rem;
-          font-weight: 500;
-        }
       }
     }
+  }
+}
+
+.all-news-sections {
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 3rem 0;
+  h2 {
+    font-size: 1.3125rem;
+    color: #292929;
+    font-weight: 800;
+  }
+}
+
+.page-detail-content-section {
+  padding: 3rem 0;
+  p {
+    font-size: 1.125rem;
   }
 }
 
