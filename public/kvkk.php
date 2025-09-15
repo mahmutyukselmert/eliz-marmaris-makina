@@ -19,8 +19,7 @@
                 </div>
                 <div class="col-lg-5 px-5 d-flex align-items-center justify-content-center mx-auto">
                     <div class="banner-content">
-                        <h1 class="banner-title">Mizyonumuz</h1>
-                        <p class="banner-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        <h1 class="banner-title">K.V.K.K. ve Çerez Politikamız</h1>
                     </div>
                 </div>
             </div>
@@ -29,14 +28,19 @@
         <section class="company-info-two-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div class="image-box">
-                            <img src="./assets/images/kurumsal-gorsel-2.webp" class="img-fluid">
-                            <div class="image-mask"></div>
-                        </div>
+                    <div class="col-lg-12">
+                        <h2> Kişisel Verileri Koruma Kanunu </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.  </p>
                     </div>
-                    <div class="col-lg-7 offset-lg-1">
-                        <h2> Marmaris Makina Misyon </h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="company-info-two-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2> Çerez Politikamız </h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.  </p>
                     </div>
                 </div>

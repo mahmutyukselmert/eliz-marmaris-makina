@@ -26,6 +26,23 @@
             </div>
         </section>
 
+        <section class="company-info-two-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="image-box">
+                            <img src="./assets/images/kurumsal-gorsel-2.webp" class="img-fluid">
+                            <div class="image-mask"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 offset-lg-1">
+                        <h2> Marmaris Makina Vizyon </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.  </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="company-news-sections">
             <div class="container">
                 <div class="row">

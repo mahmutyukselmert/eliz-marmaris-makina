@@ -133,7 +133,7 @@
                                     BİZE ULAŞIN
                                 </span>
                             </a>
-                            <a href="#" class="btn btn-primary">
+                            <a href="https://www.shell.com.tr/suruculer/madeni-yaglar/lubematch.html#iframe=L21vdG9yaXN0cy9vaWxzLWx1YnJpY2FudHMvbHViZW1hdGNoL19qY3JfY29udGVudC9yb290L21haW4vc2VjdGlvbi93ZWJfY29tcG9uZW50L2xpbmtzL2l0ZW0wLnN0cmVhbS8xNzQ4NTk4ODAwOTY4L2M5MTBkODc3ZTQ2MTQ1YmMxMDc1MmEwNzNkYmI1M2M4YjIyNDk2MDMvaWZyYW1lLmh0bWwjL3RyL3RyLXRy" class="btn btn-primary" target="_blank">
                                 <img src="./assets/images/yag-icon.webp" alt="">
                                 <span>DOĞRU YAĞI BULUN</span>
                             </a>

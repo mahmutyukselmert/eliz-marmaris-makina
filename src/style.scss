@@ -46,9 +46,43 @@ $container-max-widths: (
 );
 
 .container-header {
-  max-width: 106.25rem;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin: 0 auto;
 }
+
+@media (min-width: 36rem) {
+  .container-header {
+    max-width: 33.75rem;
+  }
+}
+@media (min-width: 48rem) {
+  .container-header {
+    max-width: 45rem;
+  }
+}
+@media (min-width: 62rem) {
+  .container-header {
+    max-width: 60rem;
+  }
+}
+@media (min-width: 75rem) {
+  .container-header {
+    max-width: 71.25rem;
+  }
+}
+@media (min-width: 87.5rem) {
+  .container-header {
+    max-width: 82.5rem;
+  }
+}
+@media (min-width: 108.75rem) {
+  .container-header {
+    max-width: 106rem;
+  }
+}
+
 
 .col-lg-2-5 {
   @media (min-width: 60rem) {
@@ -304,6 +338,28 @@ header {
         }
         @media (max-width: 992px) {
           margin: 0rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1650px) {
+    nav.navbar {
+      .logo-wrapper {
+        max-width: 200px;
+      }
+    }
+  }
+
+  @media (max-width: 1440px) {
+    nav.navbar {
+      .logo-wrapper {
+        max-width: 200px;
+      }
+      .nav-item {
+        margin: 0 0.6rem;
+        .nav-link {
+          font-size: 1rem;
         }
       }
     }
@@ -658,7 +714,8 @@ header {
   }
 
   @media (max-width: 992px) {
-    .first-shell-area, .two-shell-recharge {
+    .first-shell-area,
+    .two-shell-recharge {
       max-height: max-content;
     }
     img.img-full {
@@ -669,7 +726,10 @@ header {
     .left-image-area {
       padding: 0;
     }
-    .right-red-area, .right-gray-area { padding: 1rem; }
+    .right-red-area,
+    .right-gray-area {
+      padding: 1rem;
+    }
     .heading {
       flex-direction: column;
       h2 {
@@ -692,7 +752,8 @@ header {
   }
 }
 
-.home-popular-products-section, .all-products-section {
+.home-popular-products-section,
+.all-products-section {
   position: relative;
 
   .product-slider-controls {
@@ -957,7 +1018,7 @@ header {
     }
   }
   iframe {
-    border-radius: .9375rem;
+    border-radius: 0.9375rem;
   }
   @media (max-width: 992px) {
     iframe {
@@ -983,7 +1044,7 @@ header {
 .form-area {
   background-color: #fff;
   padding: 1rem 2rem;
-  border-radius: .9375rem;
+  border-radius: 0.9375rem;
   h2 {
     color: #bd1b20;
     font-size: 1.5rem;
@@ -1068,7 +1129,8 @@ header {
     font-weight: 800;
     font-size: 1rem;
     border-radius: 1.25rem;
-    svg, img {
+    svg,
+    img {
       width: 2.0625rem;
       height: 2.3125rem;
       margin-right: 0.5rem;
@@ -1278,3 +1340,17 @@ header {
 }
 
 @import "./scss/swiper.scss";
+
+.btn-wp {
+  position: fixed;
+  background-color: #24d365;
+  border-radius: 3rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 99999999;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
