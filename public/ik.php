@@ -47,20 +47,20 @@
                             <h2>Formu Doldur</h2>
                             <form method="POST" action="">
                                 <div class="form-floating mb-1">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="Adınız Soyadınız">
-                                    <label for="floatingInput">Adınız Soyadınız</label>
+                                    <input type="text" class="form-control" id="floatingInput1" placeholder="Adınız Soyadınız" required>
+                                    <label for="floatingInput1">Adınız Soyadınız</label>
                                 </div>
                                 <div class="form-floating mb-1">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">E-Posta</label>
+                                    <input type="email" class="form-control" id="floatingInput2" placeholder="E-Posta Adresiniz" required>
+                                    <label for="floatingInput2">E-Posta</label>
                                 </div>
                                 <div class="form-floating mb-1">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Telefon</label>
+                                    <input type="tel" class="form-control" id="floatingInput3" placeholder="05xx xxx xxxx" required>
+                                    <label for="floatingInput3">Telefon</label>
                                 </div>
                                 <div class="form-row mt-3 mb-1">
                                     <label for="floatingInput">Cvniz</label>
-                                    <input type="file" class="form-control" id="floatingInput">
+                                    <input type="file" class="form-control" id="floatingInput" required>
                                 </div>
                                 <button type="submit" class="btn btn-outline-dark">
                                     Gönder
